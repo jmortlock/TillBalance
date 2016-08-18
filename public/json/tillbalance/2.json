@@ -1,0 +1,43 @@
+﻿{
+  "ID": "2",
+  "Station": "Restaraunt",
+  "Drawer": 1,
+  "User": "Homer J Simpson",
+  "SystemTotal": "500",
+  "ActualTotal": "550",
+  "VarianceTotal": "50",
+  "Status": "NOT PROCESSED",
+  "ReadTime": "2015-02-02",
+  "Processed": false,
+  "UserProcessed": true,
+  "Tenders": [
+    {
+      "tenderType": 2,
+      "tenderName": "VISA",
+      "amount": {
+        "actual": null,
+        "system": 0,
+        "variance": 0
+      },
+      "tips": {
+        "actual": null,
+        "system": 0,
+        "variance": 0
+      }
+    },
+    {
+      "tenderType": 3,
+      "tenderName": "MasterCard",
+      "amount": {
+        "actual": null,
+        "system": 0,
+        "variance": 0
+      },
+      "tips": {
+        "actual": null,
+        "system": 0,
+        "variance": 0
+      }
+    }
+  ]
+}

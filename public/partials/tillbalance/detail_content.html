@@ -1,0 +1,107 @@
+﻿<div class="container-fluid" ng-controller="TillBalanceDetailCtrl">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Station</th>
+                        <th>Drawer</th>
+                        <th>User</th>
+                        <th>Status</th>
+                        <th>Read Time</th>
+                        <th>Processed</th>
+                        <th>User Processed</th>
+                    </tr>
+                    <tr>
+                        <td>{{ item.Station }}</td>
+                        <td>{{ item.Drawer }}</td>
+                        <td>{{ item.User }}</td>
+                        <td>{{ item.Status }}</td>
+                        <td>{{ item.ReadTime }}</td>
+                        <td>{{ item.Processed | checkmark }}</td>
+                        <td>{{ item.UserProcessed | checkmark }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="">
+                <table class="table table-striped table-bordered">
+                    <tr>
+                        <th>Tender</th>
+                        <th>&nbsp;</th>
+                        <th>Amount</th>
+                        <th>Tips</th>
+                    </tr>
+                    <tbody>
+                        <tr ng-repeat="tender in item.Tenders">
+                            <!-- Tender Name -->
+                            <td class=" col-xs-1 col-md-2">
+                                {{ tender.tenderName }}
+                                {{ something() }}
+                            </td>
+                            <td class="col-xs-1 col-md-2">
+                                <table class="table">
+                                    <tr>
+                                        <td class="col-md-6"><input class="form-control" type="text" value="Actual" disabled> </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-6">System</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-6">Variance</td>
+                                    </tr>
+                                </table>
+                            </td>
+
+                            <!-- Amount -->
+                            <td class="col-xs-5 col-md-4">
+                                <table class="table">
+                                    <tr>
+                                        <td class="col-md-6">
+                                            <div ng-if="tender.tenderType == 1" ng-controller="ModalDemoCtrl">
+                                                <div class="input-group">
+                                                    <input id="tender_actual" type="number"ng-model="tender.amount.actual" class="form-control"   placeholder="Actual" ng-readonly="selected" />
+                                                    <span class="input-group-btn">
+                                                        <button class="btn btn-default" type="button" ng-click="open('lg', tender)">$</button>
+                                                    </span>
+                                                </div><!-- /input-group -->
+                                            </div>
+                                            <div ng-if="tender.tenderType != 1" ng-controller="ModalDemoCtrl">
+                                                <input type="number" ng-model="tender.amount.actual" class="form-control" placeholder="Actual" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-6">$ {{ tender.amount.system | number:2 }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-6">$ {{ tender.amount.system - tender.amount.actual | number:2 }}</td>
+                                    </tr>
+                                </table>
+                            </td>
+
+                            <!-- Tips -->
+                            <td class="col-xs-5 col-md-4">
+                                <table class="table">
+                                    <tr>
+                                        <td class="col-md-6"><input type="number" class="form-control" ng-model="tender.tips.actual" placeholder="Actual" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-6">$ {{ tender.tips.system | number:2 }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-6">$ {{ tender.tips.system - tender.tips.actual | number:2 }}</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

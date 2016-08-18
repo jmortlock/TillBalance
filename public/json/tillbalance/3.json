@@ -1,0 +1,43 @@
+﻿{
+  "ID": "3",
+  "Station": "Front Bar",
+  "Drawer": 1,
+  "User": "Marge Simpson",
+  "SystemTotal": "1",
+  "ActualTotal": "2",
+  "VarianceTotal": "1",
+  "Status": "NOT PROCESSED",
+  "ReadTime": "2015-02-02",
+  "Processed": false,
+  "UserProcessed": true,
+  "Tenders": [
+    {
+      "tenderType": 2,
+      "tenderName": "VISA",
+      "amount": {
+        "actual": null,
+        "system": 0,
+        "variance": 0
+      },
+      "tips": {
+        "actual": null,
+        "system": 0,
+        "variance": 0
+      }
+    },
+    {
+      "tenderType": 3,
+      "tenderName": "MasterCard",
+      "amount": {
+        "actual": null,
+        "system": 0,
+        "variance": 0
+      },
+      "tips": {
+        "actual": null,
+        "system": 0,
+        "variance": 0
+      }
+    }
+  ]
+}

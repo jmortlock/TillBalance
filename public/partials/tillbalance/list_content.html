@@ -1,0 +1,91 @@
+﻿<div class="container-fluid" ng-controller="TillBalanceListTableCtrl">
+    <div class="row">
+        <div class="well">
+            Sort by:
+            <select ng-model="orderProp">
+                <option value="Station">Station</option>
+                <option value="User">User</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="table-responsive" >
+
+            <table class="table table-striped table-hover table-bordered">
+
+                <colgroup>
+                    <col class="col-md-4 col-xs-2" />
+                    <col class="col-md-4 col-xs-2" />
+                    <col class="col-md-4 col-xs-2" />
+                </colgroup>
+                <tbody>
+                    <tr ng-repeat="item in data | filter:showProcessedFilter | orderBy:orderProp" ui-sref="tillread.detail({id: item.ID})">
+                        <td>
+                            <table>
+                                <tr>
+                                    <td class="col-md-4"><strong>Station:</strong></td>
+                                    <td class="col-md-8">{{item.Station}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4"><strong>Drawer:</strong></td>
+                                    <td class="col-md-8">{{item.Drawer}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4"><strong>User:</strong></td>
+                                    <td class="col-md-8">{{item.User}}</td>
+                                </tr>
+                            </table>
+                        </td>
+
+                        <td>
+                            <table>
+                                <tr>
+                                    <td class="col-md-4"><strong>System:</strong></td>
+                                    <td class="col-md-8">${{item.SystemTotal | number:2}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4"><strong>Actual:</strong></td>
+                                    <td class="col-md-8">${{item.ActualTotal | number:2}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4"><strong>Variance:</strong></td>
+                                    <td class="col-md-8">${{item.VarianceTotal | number:2}}</td>
+                                </tr>
+                            </table>
+                        </td>
+
+                        <td>
+                            <table>
+                                <tr>
+                                    <td class="col-md-4"><strong>Processed:</strong></td>
+                                    <td class="col-md-8">{{item.Processed | checkmark }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4"><strong>User Processed:</strong></td>
+                                    <td class="col-md-8">{{item.UserProcessed | checkmark}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4"><strong>Read Time:</strong></td>
+                                    <td class="col-md-8">{{item.ReadTime}}</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="well well-sm">
+            <form>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" ng-model="showProcessed">Show processed tills
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

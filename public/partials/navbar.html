@@ -1,0 +1,27 @@
+﻿<nav id="navbar-example" class="navbar navbar-inverse navbar-static" role="navigation" ng-controller="NavBarCtrl">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Sysnet - {{ module }}</a>
+        </div>
+
+        <!-- Stuff that needs to colapse -->
+        <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown" uib-dropdown>
+                    <a href="#" class="dropdown-toggle" uib-dropdown-toggle data-toggle="uib-dropdown">{{ title }} <b class="caret"></b></a>
+                    <ul class="uib-dropdown-menu" role="menu">
+                        <li ng-repeat="action in actions">
+                            <a ui-sref={{action.route}}> {{ action.name }} </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.nav-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>

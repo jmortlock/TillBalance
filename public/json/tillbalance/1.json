@@ -1,0 +1,58 @@
+﻿{
+  "ID": "1",
+  "Station": "Bistro",
+  "Drawer": 1,
+  "User": "John M",
+  "SystemTotal": "100",
+  "ActualTotal": "101",
+  "VarianceTotal": "1",
+  "Status": "NOT PROCESSED",
+  "ReadTime": "2015-01-01",
+  "Processed": true,
+  "UserProcessed": false,
+  "Tenders": [
+    {
+      "tenderType": 1,
+      "tenderName": "CASH",
+      "amount": {
+        "actual": null,
+        "system": 0,
+        "variance": 0
+      },
+      "tips": {
+        "actual": null,
+        "system": 0,
+        "variance": 0
+      }
+    },
+    {
+      "tenderType": 2,
+      "tenderName": "VISA",
+      "amount": {
+        "actual": null,
+        "system": 10,
+        "variance": 0
+      },
+      "tips": {
+        "actual": null,
+        "system": 10,
+        "variance": 0
+      }
+    },
+    {
+      "tenderType": 3,
+      "tenderName": "MasterCard",
+      "amount": {
+        "actual": null,
+        "system": 20,
+        "variance": 0
+      },
+      "tips": {
+        "actual": null,
+        "system": 20,
+        "variance": 0
+      }
+    }
+
+  ]
+}

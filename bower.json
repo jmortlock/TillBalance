@@ -1,0 +1,17 @@
+{
+  "name": "tillbalance",
+  "description": "Till Balance",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "angular": "1.4.x",
+    "angular-animate": "1.4.x",
+    "angular-mocks": "1.4.x",
+    "bootstrap": "~3.3.5",
+    "angular-ui-router": "0.2.15",
+    "angular-bootstrap": "0.14.3",
+    "angular-ui-router-tabs": "1.7.x",
+    "angular-ui-grid": "~3.0.7",
+    "angular-utils-ui-breadcrumbs": "~0.2.1"
+  }
+}

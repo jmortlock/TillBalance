@@ -1,0 +1,41 @@
+﻿[
+  {
+    "ID": "1",
+    "Station": "Bistro",
+    "Drawer": 1,
+    "User": "John M",
+    "SystemTotal": "100",
+    "ActualTotal": "101",
+    "VarianceTotal": "1",
+    "Status": "NOT PROCESSED",
+    "ReadTime": "2015-01-01",
+    "Processed": true,
+    "UserProcessed": false
+  },
+  {
+    "ID": "2",
+    "Station": "Restaraunt",
+    "Drawer": 1,
+    "User": "Homer J Simpson",
+    "SystemTotal": "500",
+    "ActualTotal": "550",
+    "VarianceTotal": "50",
+    "Status": "NOT PROCESSED",
+    "ReadTime": "2015-02-02",
+    "Processed": false,
+    "UserProcessed": true
+  },
+  {
+    "ID": "3",
+    "Station": "Front Bar",
+    "Drawer": 1,
+    "User": "Marge Simpson",
+    "SystemTotal": "1",
+    "ActualTotal": "2",
+    "VarianceTotal": "1",
+    "Status": "NOT PROCESSED",
+    "ReadTime": "2015-02-02",
+    "Processed": false,
+    "UserProcessed": true
+  }
+]
